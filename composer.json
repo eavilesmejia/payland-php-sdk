@@ -1,0 +1,25 @@
+{
+  "name": "paylands/sdk",
+  "description": "Library Paylands Api PHP SDK",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Edgard Aviles",
+      "email": "eavilesmejia@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PaylandsSDK\\": "src/",
+      "Test\\": "tests/"
+    }
+  }
+}
