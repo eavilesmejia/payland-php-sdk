@@ -10,7 +10,7 @@ trait Api
     private function post(string $url, array $params): array
     {
         $payload_json = json_encode($params);
-        $token = $this->api_key;
+        $token = $this->getApiKey();
 
         $ch = curl_init();
 
@@ -34,23 +34,13 @@ trait Api
         return $response;
     }
 
-    private function get(string $url): array
+    private function getURL(string $endpoint): string
     {
-        $response = file_get_contents($url);
-
-        if ($response) {
-            return json_decode($response, true);
-        }
-        return [];
-    }
-
-    private function getURL(string $endpoint, array $swapping = []): string
-    {
-        $url = self::$API_URL . $endpoint;
-        if (empty($swapping)) {
-            return $url;
+        $env = $this->getEnvironment();
+        if ($env == 'sandbox') {
+            return self::$API_URL  . self::$SANDBOX . $endpoint;
         }
 
-        return vsprintf($url, $swapping);
+        return self::$API_URL . $endpoint;
     }
 }
