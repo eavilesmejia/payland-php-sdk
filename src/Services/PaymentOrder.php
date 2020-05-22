@@ -82,11 +82,17 @@ class PaymentOrder implements ApiInterface
         return $this->environment;
     }
 
+    /**
+     * @return string
+     */
     public function getRedirectUrl(): string
     {
         return $this->getURL(self::REDIRECT_URL);
     }
 
+    /**
+     * @return string
+     */
     public function getTokenized3DSUrl(): string
     {
         return $this->getURL(self::TOKENIZED_3DS_URL);
