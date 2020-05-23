@@ -14,7 +14,6 @@ class PaymentOrder implements ApiInterface
 
     const ENDPOINTS = [
         'create_order' => '/payment',
-        'tokenized_3ds' => '/payment/tokenized/',
         'direct_payment' => '/payment/direct',
     ];
 
