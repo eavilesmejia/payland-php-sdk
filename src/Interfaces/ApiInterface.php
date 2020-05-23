@@ -12,7 +12,4 @@ interface ApiInterface
 
     public function getEnvironment(): string;
 
-    public function getRedirectUrl(): string;
-
-    public function getTokenized3DSUrl(): string;
 }
