@@ -28,5 +28,5 @@ $ composer install
 ```
 ### Run Tests
 ```$xslt
-$ php vendor/bin/phpunit --bootstrap vendor/autoload.php tests/unit/Services/OrderPayment.php
+$ php vendor/bin/phpunit --bootstrap vendor/autoload.php tests/unit/Services/PaymentOrderTest.php
 ```
